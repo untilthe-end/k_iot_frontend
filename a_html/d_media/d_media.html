@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d_media.html</title>
+</head>
+
+<body>
+  <!-- 
+  ! 멀티미디어 object 와 embed 는 자동재생됨
+  : 이미지, 오디오, 비디오, PDF 등 여러 형태의 데이터
+  -->
+  <!-- <object data="현재동영상.mp4"></object> -->
+  <!-- <object data="reliable-safe-327618.mp3" type=""></object> -->
+  <object data="SQLD(24년) 개정판_개념정리.pdf" width="100%" height="700"></object>
+
+  <!-- embed요소: 대부분의 브라우저에서 모두 사용 가능(legacy)여서 -->
+  <!-- <embed src="현재동영상.mp4" type="" />
+  <embed src="reliable-safe-327618.mp3" type="" /> -->
+
+  <!-- 
+    audio: 배경음악, 효과음 등의 오디오 파일
+    video: 비디오파일
+
+    >> 두 요소의 속성과 사용법이 유사
+
+    controls 속성
+    : 오디오나 비디오 파일을 통제하는 컨트롤 바 생성
+
+    autoplay 속성
+    : 자동 재생 (사용자 경험 저해로 권장 x)
+
+    muted 속성
+    : 소리 제거   -- autoplay 와 함께 사용 권장(브라우저 정책때문에)
+
+    loop 속성
+    : 반복 재생
+  -->
+  <hr />
+  <audio src="./reliable-safe-327618.mp3" controls autoplay></audio>
+  <video src="./현재동영상.mp4" width="300" controls autoplay muted></video>
+</body>
+
+</html>
