@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>b_input.html</title>
+  <style>
+    h2 {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>input 태그의 type 속성</h1>
+  <!-- 
+    input 요소: 기본 너비 20자 (초과된 내용은 화면상 생략)
+
+    cf) 많은 내용 작성 시 textarea 사용 권장
+  -->
+  <h2>1. text & password 속성값</h2>
+  <!-- 
+    text: 일반 텍스트 (기본값, 주로 아이디, 이름, 주소 등 한 줄짜리)
+    password: 입력 내용 확인 x (민감 정보)
+  -->
+  <form>
+    <label>
+      아이디
+      <!-- value 속성: 초기값 지정 o (수정 가능) -->
+      <input type="text" size="10" maxlength="5" value="qwer123"><br />
+    </label>
+    <label>
+      비밀번호
+      <input type="password" size="" maxlength="" value=""><br />
+    </label>
+  </form>
+  <h2>2. search & url & email & tel 속성</h2>
+  <!-- 
+    text 입력을 기본 동작 & 각 용도에 맞게 기능을 추가
+    >> 시각적으로는 text와 동일
+  -->
+
+  <!--
+    search - 모바일에서 발전한 '검색 후' x표시로 눌러서 지울수 있음.
+  -->
+  <input type="search"><br />
+  <input type="url"><br />
+  form
+  <form action="">
+    <input type="email">
+    <button type="submit">전송</button>
+  </form>
+  <input type="tel"><br />
+
+  <h2>3. checkbox & radio</h2>
+  <!-- 
+    여러 항목 중에서 원하는 항목을 선택할 때 사용
+    checkbox - 2개 이상 (중복 선택) / radio (1개만 선택)
+
+    ? 서버에 전달할 값을 value 속성을 사용하여 지정 (필수)
+
+    ? checked 속성: 기본 선택값 선택
+      >> bool 속성 (boolean)
+        : 속성값 true / false - 기본으로 check 되어있음.
+      cf) 해당 속성을 사용하지 않으면 기본값 false 지정
+          해당 속성 지정 시 true 지정
+  -->
+  <input type="checkbox">
+  <input type="radio">
+
+  <form>
+    <fieldset>
+      <legend>2025 프로 가을야구 진출팀 예측</legend>
+      <label>
+        <input type="checkbox" value="lotte"> 롯데 자이언츠<br />
+      </label>
+      <label>
+        <input type="checkbox" value="lg" checked> LG<br />
+      </label>
+      <label>
+        <input type="checkbox" value="hanhwa"> 한화 이글스<br />
+      </label>
+      <label>
+        <input type="checkbox" value="ssg" checked> SSG 랜더스<br />
+      </label>
+      </fieldset>
+
+
+      <!-- 
+        checkbox는 fieldset에 넣으면 그 범주가 정해지는데, 
+        radio 는 안됨. name으로 같은거 묶어줘야 함.
+      -->
+      <fieldset>
+        <legend>2025 프로야구 우승팀 예측</legend>
+        <!-- 
+        radio 속성의 name 속성
+        : 서버 폼에서 각각의 radio 요소를 구분하는 이름
+        > 같은 이름의 name 속성 중에는 반드시 한 가지만 선택!
+      -->
+        <label>
+          <input type="radio" value="lotte" name="winner"> 롯데 자이언츠<br />
+        </label>
+        <label>
+          <input type="radio" value="lg" name="winner"> LG<br />
+        </label>
+        <label>
+          <input type="radio" value="hanhwa" name="winner2"> 한화 이글스<br />
+        </label>
+        <label>
+          <input type="radio" value="ssg" name="winner2"> SSG 랜더스<br />
+        </label>
+
+    </fieldset>
+    <fieldset>
+      <legend>2026 프로야구 우승팀 예측 이벤트 결과 문자 수신동의</legend>
+      <label for="agree">동의함</label>
+      <input type="radio" id="agree" name="message">
+
+      <label for="disagree">동의 안 함</label>
+      <input type="radio" id="disagree" name="message">
+
+    </fieldset>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    ! input 요소
+    : 사용자로부터 입력받을 수 있는 입력 필드를 정의
+      - 빈 요소 (내용 입력란이 없음! ) - 개발자가 보는 화면에서는 없음.
+
+      ? type 속성(필수!): 입력 필드의 종류나 형태를 정의
+        > input 태그의 형태를 변경 가능
+
+      ? name 속성: 필드의 이름을 정의 (key 역할)
+        > 웹 서버로 데이터 전송 시 해당 이름을 통해 데이터 식별
+
+      ? value 속성: 입력 필드의 초기값이나 현재값을 지정
+        > 입력값을 담는 변수
+  -->
+  <!-- 
+    ! input 태그의 주요 속성
+
+    ? autofocus 속성: 자동으로 입력 커서에 대한 활성화 지정
+      - 하나의 문서에 한 가지 input 요소에만 가능
+    ? placeholder 속성: 힌트 표시 속성 (value와 다름!)
+      - 내용값 입력 시 사라지는 속성
+
+    < bool 속성명 만으로 속성값 지정 가능(true) 
+    ? readonly 속성: 읽기 속성 (사용자 입력 x)  
+    * readonly 는 '내 정보 수정할때 이름은 readonly로 하면 될 듯'
+    ? required 속성: 필수 입력 필드 속성 NotBlank와 같음 
+    
+  -->
+  <form action="">
+    <h2>회원 정보 수정 페이지</h2>
+    <label for="id">아이디</label>
+    <input type="text" id="id" autofocus placeholder="아이디 입력" name="id" value="qwer123" readonly>
+    <br />
+
+    <label for="password">패스워드</label>
+    <input type="password" id="password" placeholder="비밀번호 입력" required>
+    <br />
+
+    <label for="email">이메일</label>
+    <input type="email" id="email" placeholder="이메일 입력">
+    <br />
+
+    <input type="submit">
+  </form>
+</body>
+
+</html>
