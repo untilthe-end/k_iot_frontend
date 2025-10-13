@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100vh;
+      background-color: #FFF8E8;
+    }
+
+    .container {
+      width: 600px;
+      height: 500px;
+      padding: 40px;
+      box-sizing: border-box;
+      background-color: #AAB396;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login {
+      width: 550px;
+      height: 400px;
+      background-color: white;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 50px;
+    }
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+      padding: 10px;
+    }
+
+    .found {}
+
+    .found a {
+      text-decoration: none;
+      color: rgb(15, 12, 12);
+      font-weight: bold;
+      padding: 8px;
+    }
+
+    .loginBtn {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+      <div class="input">
+        <input type="text" class="text" placeholder="your ID">
+        <input type="password" class="text" placeholder="password">
+      </div>
+
+      <div class="find">
+        <a href="#">아이디찾기</a>
+        <a href="#">비밀번호찾기</a>
+      </div>
+
+      <label for="remember-check">
+        <input type="checkbox" id="remember-check"> 아이디 저장하기 />
+      </label>
+      <div class="loginBtn">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+    A
+  </div>
+</body>
+
+</html>
