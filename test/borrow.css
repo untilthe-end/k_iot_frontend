@@ -1,0 +1,38 @@
+
+
+.card {
+  border: 1px solid var(--line);
+}
+
+.row {
+  display: flex;
+}
+
+.row .btn{
+  background-color: var(--ink);
+  color: var(--line);
+  padding: 10px;
+  border-radius: 10px; 
+}
+
+input {
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 5px;
+}
+.notice {
+  border: 1px solid var(--line);
+  padding: 10px;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.notice.ok{
+  background-color: rgb(167, 233, 197);
+  color: var(--ok);
+}
+
+.notice.bad{
+  background-color: rgb(255, 233, 233);
+  color: var(--bad);
+}
