@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form novalidate>
+    <div class="row">
+      <div id="ho">
+        <label for="memberId">회원번호*</label>
+        <input id="memberId" name="memberId" type="number" min="1" step="1" placeholder="우측 삼각버튼 클릭" required />
+      </div>
+      <div id="ho">
+        <label for="bookId">도서번호 * </label>
+        <input id="bookId" name="bookId" type="number" min="1" step="1" placeholder="우측 삼각버튼 클릭" required />
+      </div>
+      <div id="ho">
+        <label for="name">회원 이름 </label>
+        <input id="name" name="name" pattern="^[가-힣]{2,10}$" title="2~10자 한글만 입력" type="text" min="1"
+          placeholder="너의이름 " required />
+      </div>
+      <div id="ho">
+        <label for="email">이메일 (선택)</label>
+        <input id="email" name="email" type="email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+          placeholder="dasd@exampl.com" />
+      </div>
+      <div id="ho">
+        <label for="password">비밀번호 *</label>
+        <input id="password" name="password" type="password" pattern="^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,16}$"
+          title="8~16자 영문+숫자 조합" placeholder="최소 8자" required />
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn" type="button" aria-disabled="true">대출 요청(시연용)</button>
+    </div>
+</body>
+
+</html>

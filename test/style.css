@@ -1,0 +1,37 @@
+* {
+  font-size: 13px;
+  font-weight:700
+}
+
+form {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#ho {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 3px;
+}
+input:invalid {
+  border: 1px solid #c92a2a;
+}
+
+input:valid {
+  border: 1px solid #2b8a3e;
+}
+
+.row .btn{
+  background-color: black;
+  color: white;
+  padding: 7px;
+  border-radius: 10px; 
+  font-size: 12px;
+  font-weight: 400;
+}

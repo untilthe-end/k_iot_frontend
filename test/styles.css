@@ -16,14 +16,46 @@ html,body{
 
 .container {
   margin: auto;
-  width: 800px;
+  width: 650px;
 }
 
 .card {
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
+  border: 1px solid var(--line);
+  box-shadow: 3px 3px 5px var(--line);
 }
 
+table {
+  border-collapse:collapse;
+  width: 100%;
+  text-align: left;
+}
+tbody tr {
+  /* background-color: green; */
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 14px;
+  padding-left: 3px;
+  font-weight: 400;
+}
+
+tbody .meta {
+  font-size: 13px;
+}
+p.meta {
+  font-size: 13px;
+}
+th, td { 
+  padding: 10px;
+}
+
+.helper {
+  font-size: 12px;
+}
 .tabs a {
   text-decoration: none;
   color: black;
@@ -32,6 +64,57 @@ html,body{
   padding: 8px;
 }
 
-nav a:focus{
-  border: 1px solid blue;
+#success:target {
+  background-color: rgb(227, 255, 239);
+}
+
+#fail-member:target{
+    background-color: rgb(255, 243, 243);
+  color: var(--bad);
+}
+
+#fail-book:target{
+    background-color: rgb(255, 243, 243);
+  color: var(--bad);
+}
+
+#empty:target, #list:target{
+  border: 1px solid var(--bad);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.row .btn{
+  background-color: var(--ink);
+  color: var(--line);
+  padding: 10px;
+  border-radius: 10px; 
+}
+
+#ho, #he {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+.notice {
+  border: 1px solid var(--line);
+  padding: 10px;
+  border-radius: 10px;
 }
