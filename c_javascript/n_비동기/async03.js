@@ -25,7 +25,7 @@
 // - Promise 내부에 콜백 함수로 ㅣㅂ동기 작업이 완료되었을 때 후속 동작을 정의
 //    >> 인자로 성공 시 함수, 실패 시 함수 전달
 //       resolve(value) : 프로미스 이행 상태로 변경, 결과값은 value 반환
-//       rejectv(error) : 프로미스 실패 상태로 변경, 결과값은 error 반환
+//       reject(error) : 프로미스 실패 상태로 변경, 결과값은 error 반환
 
                   // Promise는 성공, 실패 두개를 가진다.
 const myPromise = new Promise((resolve, reject) => {
@@ -67,7 +67,7 @@ myPromise
     console.log(nextResult);
     return '세 번째 실행 시 필요한 데이터';
   })
-  // n 번째 실생문
+  // n 번째 실행문
   .then((thirdResult) => {
     console.log(thirdResult);
   })
