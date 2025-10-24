@@ -21,6 +21,78 @@
 // > node -v
 //    npm -v 
 
+//@ 1. Node.js 설치
+// 설치 확인
+// : 윈도우 키 + r
+// > cmd (명령 프롬프트 실행)
+// > node -v
+//   npm -v 
+//   "내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다." (재설치 필요!!)
+
+// ? Node.js 설치 전 삭제
+
+// - 윈도우(Windows)
+//   : 윈도우 키 > 프로그램 추가/제거 > Node.js 검색 후 삭제
+
+//   : 아래 경로에 해당하는 디렉터리(폴더) 삭제
+//     윈도우 키 > 파일 탐색기
+
+//     C:\Program Files\Nodejs
+//     C:\Program Files (x86)\Nodejs
+
+//     C:\Users\ITPS\AppData\Roaming\npm
+//     C:\사용자\ITPS\AppData\Roaming\npm
+
+//     C:\Users\user\AppData\Roaming\npm
+//     C:\사용자\user\AppData\Roaming\npm
+
+//   : 윈도우 키 + r
+//     > cmd(명령 프롬프트 실행)
+//     > node -v
+//       npm -v
+//       (내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다. - 삭제 완료)
+
+// - 맥(Mac OS)
+//   : Homebrew를 사용하여 Node 제거 방법
+//     응용 프로그램 > 유틸리티 폴더 > 터미널 실행
+//     brew uninstall --force node
+
+//   : 터미널 재실행
+//     > node -v
+//       npm -v
+//       (내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다. - 삭제 완료)
+
+// ? Node.js 설치
+// : 공식 웹 사이트(브라우저 > node.js 검색)
+// : https://nodejs.org/ko
+
+// - LTS(Long Term Support) 버전 설치 권장
+// : 파일 탐색기 > 다운로드 > 다운로드 된 node.js 실행
+
+// ? 설치 완료 여부 확인
+//   윈도우 키 + r > cmd(명령 프롬프트 창)
+//   node -v / npm -v
+
+// ? Windows에서 npm 실행이 되지 않을 경우
+//   (Node.js 시 npm이 자동 설치)
+
+// 윈도우 키 > 시스템 환경 변수 편집 > 시스템 속성 > 고급 > 우측 하단의 환경 변수 클릭
+
+// : (위)사용자 변수에서 변수 Path 더블 클릭
+//     '사용자 이름'에 대한 사용자 변수 설정
+//     - 파일 탐색기 > c드라이브 > 사용자(Users) > 자신의 컴퓨터 이름(ITPS) > AppData > Roaming > npm 경로를 복사
+//     (npm 폴더가 존재하지 않을 경우 생성 후 경로 복사)
+//     : C:\Users\ITPS\AppData\Roaming\npm
+
+// : (아래)시스템 변수 Path 설정
+//     파일 탐색기 > c드라이브 > Program Files > nodejs 경로를 복사
+
+//     > 복사한 경로를 Path 변수란에 새로 만들기 클릭 > 경로 삽입
+//     (삽입 시 마지막에 \(원화)기호 첨부)
+//     C:\Program Files\nodejs\
+
+// >>>>> 환경 변수 편집 후에는 컴퓨터 자체 '다시 시작'을 권장 <<<<<
+
 //# 2. npm 확인 
 //* java는 gradle
 // Node.js를 설치하면 자동으로 설치
@@ -55,23 +127,23 @@
 // : 타입스크립트 설치 (npm 사용)
 // > 타입스크립트 사용을 위해서는 로컬 or 전역 환경에 TS 설치가 필수 
 
+// == 설치 방법 ==
+// git bash 사용 > TS 프로젝트 최상단(e_typescript)
+
 //? npm을 사용하여 '타입스크립트 패키지' 설치
 // - 전역 설치 ('g' 옵션, global)
-//  : 개발자 컴퓨터 전체에 기능 추가
-//  > npm install -g typescript
+//   : 개발자 컴퓨터 전체에 기능 추가
+//   >> npm install -g typescript
 
 // - 프로젝트 별 설치 (개발 의존성 설치)
-//  : 현재 사용하고 있는 프로젝트 내에 기능 추가
-//  > npm install typescript --save-dev 
-//    npm i typescript -D
-// % install 대신 i라고 써도 같다.
+//   : 현재 사용하고 있는 프로젝트 내에 기능 추가
+//   >> npm install typescript --save-dev
+//      npm i typescript -D
+//   * intall 대신에 i라고 써도됨.
 
 // +) --save-dev(-D) VS --save(-S)
-//  : devDependencies - 개발 과정에서 필요한 패키지들의 목록
-//  :    dependencies - 프로젝트 실행에 필요한 패키지들의 목록
-
-// * 설치 방법
-// git bash 사용 > TS 프로젝트 최상단(e_typescript)
+// : devDependencies - 개발과정에서 필요한 패키지들의 목록
+// : dependencies    - 프로젝트 실행에 필요한 패키지들의 목록
 
 //? 프로젝트 내의 타입스크립트 버전 확인(설치 확인)
 // : tsc -v (Version 5.9.3)
