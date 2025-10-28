@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  text-align: center;
+  background-color: lightblue;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#userId {
+  width: 200px;
+  padding: 10px;
+}
+
+#fetchUserData {
+  padding: 10px;
+}
+
+#userData {
+  margin-top: 20px;
+}
