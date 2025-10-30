@@ -1,15 +1,12 @@
 import './App.css'
-import Basic from '@/pages/a_basic';
-import {Img} from './pages/a_basic/C_Component';
+import Basic from '@/pages/a_basic'
+// 기본 내보내기가 아니면 {} 중괄호 필요함
 
 function App() {
   return (
     <>
       <h1>안녕하세요 첫 리액트입니다.</h1>
       <Basic />
-      <div style={{ backgroundColor: 'orange' }}>
-        <Img />
-      </div>
     </>
   )
 }

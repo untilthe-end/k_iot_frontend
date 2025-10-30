@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
+  // StrictMode: 자투리 오류까지 잡아내겠다.
   <StrictMode>
     <App />
   </StrictMode>,

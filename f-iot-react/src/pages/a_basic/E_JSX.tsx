@@ -2,6 +2,7 @@ import React from "react";
 
 // https://cdn.pixabay.com/photo/2018/01/03/19/17/cat-3059075_1280.jpg
 
+// # cat 객체
 const cat = {
   catUrl: "https://cdn.pixabay.com/photo/",
   description: "2018/01/03/19/17/",

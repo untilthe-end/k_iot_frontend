@@ -17,7 +17,7 @@ import React, { useState } from 'react'
 
 //# 2) nfn: const functionName = (params) => {}
 //    > 명명된 함수 생성
-// const 이름 = (파리미터) => { 코드작성 }
+// const 이름 = (파라미터) => { 코드작성 }
 
 //! rfce: 함수형 컴포넌트 구조 생성
 function B_React_Counter() {

@@ -39,12 +39,13 @@ import React from "react";
   : js의 class(객체의 템플릿)과의 이름 충돌
 */
 
-// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 여기까지 봄..
-
 function Div() {
   return (
     <>
-      <img src="" alt="" />
+      {/* 
+    D_JSX.tsx:5 An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+    */}
+      <img src="a" alt="" />
       <hr />
       <br />
       <input type="text" />
@@ -61,15 +62,19 @@ function Div() {
 // 1) JSX 태그 내에서 직접적인 데이터 사용
 // 2) '속성=' 기호 바로 다음 사용
 
+// # 함수형 컴포넌트
 function D_JSX() {
   const welcomeMsg = "환영합니다.";
 
+  //              # TypeScript 문법             ${} 은 템플릿 리터럴
   const greeting = (name: string) => `안녕하세요 ${name}님`;
 
+  // # 사용자 정보를 담은 객체
   const userInfo = {
     name: "이이",
     age: 29,
   };
+  
 
   // 요소의 이벤트로 함수 전달 (자바스크립트)
   const handleClick = (value: string) => {
@@ -90,6 +95,7 @@ function D_JSX() {
   //   }
   // }
 
+  // # return () 안에는 JSX(HTML처럼 생긴 코드) 반환
   return (
     <>
       {/* html 요소 */}
@@ -129,3 +135,9 @@ function D_JSX() {
 }
 
 export default D_JSX;
+
+// * <button onClick={() => handleClick("클릭")}> 처럼
+// # 리액트의 onClick 속성은 "함수" 자체를 전달해야함
+// # 즉, 클릭 후 실행되도록 "콜백 함수" 형태로 넘겨야 함
+// * <button onClick={handleClick('클릭')>} 처럼
+// # JSX가 렌더링 될 때 바로 실행되는 함수 호출식으로 쓰면 안된다.
