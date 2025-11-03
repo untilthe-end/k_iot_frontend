@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
 // * 현재 경로에 따라 isActive를 사용하여 스타일이나 클래스를 다르게 지정가능
 
 function Navibar() { // 'ㅁㅁ' 은 길어서 넘어갈때 flexWrap 보기위함
-  const links = ['/', 'basic', 'route', 'hooks', 'ㅁㅁㅁㅁ', 'ㅁㅁㅁㅁ', 'ㅁㅁㅁㅁ'];
+  const links = ['/', 'basic', 'route', 'hooks', 'practice/post'];
 
   return (
     <div style = {{
