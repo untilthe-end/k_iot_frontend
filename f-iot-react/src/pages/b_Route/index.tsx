@@ -1,8 +1,13 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom';
-import A_DashBoardStats from './A_DashBoardStats';
-import A_DashBoard from './A_DashBoard';
-import A_DashBoardSettings from './A_DashBoardSettings';
+import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import A_DashBoardStats from "./A_DashBoardStats";
+import A_DashBoard from "./A_DashBoard";
+import A_DashBoardSettings from "./A_DashBoardSettings";
+import C_useNavigate from "./C_useNavigate";
+import D_useLocation from "./D_useLocation";
+import E_NaviExample from "./E_NaviExample";
+import E_LocationExample from "./E_LocationExample";
+import E_DetailPage from "./E_DetailPage";
 
 //! React Router DOM
 // : React 애플리케이션에서 라우팅을 담당하는 라이브러리
@@ -20,7 +25,7 @@ import A_DashBoardSettings from './A_DashBoardSettings';
 // : HTML5 History API를 사용하여 브라우저 주소(URL)와 리액트 UI를 동기화
 // - 앱 루트 최상단 main.tsx 또는 App.tsx에 반드시 명시!
 //   하위 컴포넌트에서 React Router DOM 사용 가능
-//* 새로고침 없이 URL만 변경 (SPA - Single Page Application) 하나의 페이지 
+//* 새로고침 없이 URL만 변경 (SPA - Single Page Application) 하나의 페이지
 //* 라우터의 최상위 컨테이너로 한 번만 감싸면 됨
 
 // <Routes></Routes>
@@ -43,6 +48,18 @@ import A_DashBoardSettings from './A_DashBoardSettings';
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 여기까지 봄 .................
 
+/*
+  Router 내부 컴포넌트들의 path 속성
+  1) / 로 시작하는 경우 
+    : 메인 Route 경로에서 시작
+    : http://localhost:5173
+
+  2) / 로 시작하지 않는 경우
+    : 현재 컴포넌트의 경로를 기준으로 시작
+    : http://localhost:5173/route/
+*/
+
+
 const h2Style = {
   backgroundColor: "black",
   color: "orange",
@@ -56,30 +73,42 @@ function Index() {
   //# return 에는 무조건 하나의 <태그>는 있어야함.
   return (
     <div>
-      <h1
-        style={{ backgroundColor: "black", color: "white", }}>
+      <h1 style={{ backgroundColor: 'black', color: 'white' }}>
         === 리액트 라우터 돔 ===
       </h1>
-      <h2 style={h2Style}>1. 중첩(Nested) 라우트 예시</h2>
+
+      <Link to='/route/dashboard'>중첩 라우팅: dashboard</Link> <br />
+      <Link to='/route/navigate'>useNaviate</Link> <br />
+      <Link to='/route/location'>useLocation</Link> <br />
+      <Link to='/route/navi'>종합 예제</Link>
+
+      {/* /routes */}
       <Routes>
         {/* /dashboard */}
         <Route path='dashboard' element={<A_DashBoard />}>
 
           {/* /dashboard/stats */}
-          <Route path='stats' element={<A_DashBoardStats />}/>
+          <Route path='stats' element={<A_DashBoardStats />} />
           {/* /dashboard/settings */}
-          <Route path='settings' element={<A_DashBoardSettings/>}/>
+          <Route path='settings' element={<A_DashBoardSettings />} />
+
         </Route>
+
+        <Route path='navigate' element={<C_useNavigate />} />
+        <Route path='location' element={<D_useLocation />} />
+
+        {/* useNavigate & useLocation 예제 */}
+        <Route path='navi' element={<E_NaviExample />} />
+        <Route path='locate' element={<E_LocationExample />} />
+        <Route path='detail' element={<E_DetailPage />} />
       </Routes>
-      {/* 컴포넌트는 주로 단일 태그로 사용 */}
-  
     </div>
   );
 }
 
 export default Index;
 
+
 // # 그럼 Routes 가 SpringBoot의 ApiMapping과 같은건가?
 // * No, 아니에요~ 그러면 큰일나요
 // ? React에서 라우팅 하는 것이 우리가 주소창에 보는 URL이다.
-  

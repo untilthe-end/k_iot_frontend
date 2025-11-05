@@ -14,14 +14,14 @@ import { NavLink } from 'react-router-dom';
 // * 현재 경로에 따라 isActive를 사용하여 스타일이나 클래스를 다르게 지정가능
 
 function Navibar() { // 'ㅁㅁ' 은 길어서 넘어갈때 flexWrap 보기위함
-  const links = ['/', 'basic', 'route', 'hooks', 'practice/post'];
+  const links = ['/', 'basic', 'route', 'hooks', 'practice/post', 'practice/search'];
 
   return (
     <div style = {{
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-around',
-      margin: '10px 20px',
+      margin: '5px',
       border: '1px solid black',
       borderRadius: '5px'
     }}>
@@ -34,7 +34,7 @@ function Navibar() { // 'ㅁㅁ' 은 길어서 넘어갈때 flexWrap 보기위�
             color: isActive ? 'white' : 'black',
             backgroundColor: isActive ? 'black' : 'white',
             margin: '5px',
-            padding: '10px 20px',
+            padding: '5px 10px',
             borderRadius: '5px'
           })}
         >
