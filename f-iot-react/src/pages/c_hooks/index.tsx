@@ -37,31 +37,27 @@ function Index() {
       </h1>
 
       <ToggleSection title="8. 리액트 Hooks - Webcam">
-        {/* <Webcam /> */} 카메라 실시간 스트림하려면 주석해제
-        <hr />
+        <p>Webcam</p>
+        {/* <Webcam /> */} 
       </ToggleSection>
-
+      
       <ToggleSection title="7. 리액트 Hooks - Todo(LocalStorage)">
         <TodoAppLocalStorage />
-        <hr />
       </ToggleSection>
 
       <ToggleSection title="6. 리액트 Hooks - custom Hooks">
-        <Custom01 />
-        <hr />
-        <Custom02 />
-        <hr />
-        <Custom03 />
+        <Custom01 /> <hr />
+        <Custom02 /> <hr />
+        <Custom03 /> <hr />
       </ToggleSection>
-
+      
       <ToggleSection title="5. 리액트 Hooks - useReducer">
-        <Reducer01 />
-        <hr />
+        <Reducer01 /> <hr />
         <Reducer02 />
       </ToggleSection>
-
+      
       <ToggleSection title="4. 리액트 Hooks - useCallback & useMemo">
-        <UseCallback />
+        <UseCallback /> <hr />
         <UseMemo />
       </ToggleSection>
 
