@@ -23,7 +23,7 @@ import React from "react";
   * <div> 는 공간을 차지하고 싶을때 사용하는 것!
   - 주로 빈 Fragment <></> 사용
 
-  2) 태그 단기
+  2) 태그 닫기
   - 빈 태그(void 태그, 단일 태그) 사용 시 닫히는 꺽쇠 괄호에 / 첨부 | 없으면 컴파일 오류남 
   - input, hr, br, img 등
 

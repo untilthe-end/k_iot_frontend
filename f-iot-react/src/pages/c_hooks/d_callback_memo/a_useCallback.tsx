@@ -1,14 +1,11 @@
 import React, { memo, useCallback, useState } from 'react'
 
-//& 부모가 리렌더링돼도 자식 컴포넌트가 불필요하게 다시 렌더링되지 않도록
-//% '성능 최적화'하는 예제 
-
 //* React.memo : 컴포넌트 버전의 최적화 도구
 //* useCallback: 함수버전의 useMemo
 
 // & React.memo: "이전에 받은 선물이랑 똑같으면 굳이 새로 포장 안 할게!"
 // & useCallback: "내가 준 선물(함수) 그대로 다시 줄게, 주소 안 바꿀게"
-// # 두 개를 같이 쓰면 "부모가 리렌더링돼도 자식은 그대로 유지"가 가능해진다.
+// # 두 개를 같이 쓰면 "부모가 리 렌더링돼도 자식은 그대로 유지"가 가능해진다.
 
 //! useCallback
 // : React 함수형 컴포넌트 Hook
@@ -32,15 +29,16 @@ import React, { memo, useCallback, useState } from 'react'
 // : 동일하면 다시 렌더링하지 않음(스킵)
 // : 다르면 재랜더링 실행
 
+//& 자식 컴포넌트(Button)
 const Button = memo(({ handleClick }: {handleClick: () => void }) => {
   console.log('버튼이 렌더링되었습니다.');
   return <button onClick={handleClick}>자식 컴포넌트의 버튼</button>;
 });
 
 
-//! 부모 컴포넌트
+//& 부모 컴포넌트
 function a_useCallback() {
-  // # Hooks
+
   const [count, setCount] = useState<number>(0);
   const [text, setText] = useState<string>('');
 
@@ -93,3 +91,12 @@ function a_useCallback() {
 }
 
 export default a_useCallback
+
+// ? HTML 기본태그
+// & <button onClick={handleCountClick}>부모 컴포넌트의 버튼</button>
+
+// ? 사용자 정의(React) 컴포넌트
+// & <Button handleClick={handleCountClick} />
+
+// 콘솔창에 console.log('부모 렌더링') 두번 출력되는 이유?
+// StrictMode 때문이다. 개발할 때는 일부러 더블체킹해서 side effect 찾으려는 것

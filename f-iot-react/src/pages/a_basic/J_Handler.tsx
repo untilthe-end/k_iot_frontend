@@ -22,7 +22,7 @@ interface ButtonProps {
 }
 
 // == 이벤트 핸들러를 자식 컴포넌트에 전달 ==
-// 부모 컴포넌트) 이벤트 핸들러를 저으이
+// 부모 컴포넌트) 이벤트 핸들러를 정의
 // 자식 컴포넌트) 해당 핸들러를 props로 받아 실행
 // >> 이벤트 로직은 부모가 담당, UI는 자식이 담당하는 '역할 분리'
 function ButtonComponent({ children, onButtonClick }: ButtonProps) {
