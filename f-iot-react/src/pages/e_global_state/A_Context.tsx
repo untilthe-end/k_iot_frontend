@@ -63,8 +63,6 @@ interface User {
 //@ 상태와 상태 업데이트 함수를 묶은 타입 정의
 interface UserContextType {
   user: User | null;
-  // React.Dispatch<T>
-  // : 어떤 값을 받아서 처리하는 함수 타입
   setUser: React.Dispatch<React.SetStateAction<User | null>>;
 }
 
