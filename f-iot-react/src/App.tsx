@@ -19,9 +19,20 @@ import { useUIstore } from "./stores/ui.store";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Toast from "./components/Toast";
+import { useEffect } from "react";
+import { useGlobalStore } from "./stores/global.store";
 
 // 기본 내보내기가 아니면 {} 중괄호 필요함
 function App() {
+  const { isLoaded, fetchGlobalData } = useGlobalStore();
+
+  useEffect(() => {
+    if (!isLoaded) {
+      //전역 상태 관리에 Global 데이터가 없는 경우
+      fetchGlobalData();
+    }
+  }, [isLoaded, fetchGlobalData]); // 맨 처음 실행 + 의존성 배열값 변경마다 실행
+
   // zustand의 store는 호출 시 내부의 스토어를 객체 형식으로 반환
   // const { 전역상태내부의 속성 또는 함수명} = useUIStore(); 
   // > 내부의 모든 속성과 메서드 호출 후, 좌항에 일치하는 값만을 남김
