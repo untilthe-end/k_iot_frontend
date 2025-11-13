@@ -1,0 +1,38 @@
+/* global.css */
+
+/* 
+  & height: 100% 
+  * 전체 레이아웃이 화면 높이에 맞춰짐 (반응형에 필요함)
+
+  & display: inline-block; 
+  * 버튼에 매우 적합 (padding, width, height 적용가능)
+*/
+
+html, body, #root {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  color: var(--color-primary-hover);
+}

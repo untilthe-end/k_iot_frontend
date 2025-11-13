@@ -12,7 +12,7 @@ function Sidebar() {
     position: 'fixed',
     top: 0,
     left: 0,
-    width: '220px',
+    width: '270px',
     height: '100%',
     backgroundColor: darkMode ? '#333' : '#ddd',
     padding: '10px',
